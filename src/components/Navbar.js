@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState, useEffect } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import Logo from "../assets/photo.jpg";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [navbarSolid, setNavbarSolid] = useState(false); // Added state for solid navbar
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -20,57 +22,80 @@ function Navbar() {
 
   useEffect(() => {
     showButton();
+    const handleScroll = () => {
+      if (window.scrollY > 600) {
+        setNavbarSolid(true);
+      } else {
+        setNavbarSolid(false);
+      }
+    };
+    window.addEventListener("resize", showButton);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("resize", showButton);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
-
-  window.addEventListener('resize', showButton);
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
+      <nav className={`navbar ${navbarSolid ? "solid" : ""}`}>
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <img width="150px" height="auto" src={Logo} alt="logo" />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                <i class="fa fa-home" aria-hidden="true"></i>
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/services'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Services
+                to="/genres"
+                className="nav-links"
+                onClick={closeMobileMenu}>
+                <i class="fa-solid fa-film"></i>
+                AB0+ Genres
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Products
+                to="/latest"
+                className="nav-links"
+                onClick={closeMobileMenu}>
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                Latest
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/boxoffice"
+                className="nav-links"
+                onClick={closeMobileMenu}>
+                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                BoxOffice
               </Link>
             </li>
 
             <li>
               <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
+                to="/sign-up"
+                className="nav-links-mobile"
+                onClick={closeMobileMenu}>
                 Sign Up
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
+
+          {button && <Button buttonStyle="btn--outline">Sign in</Button>}
         </div>
       </nav>
     </>

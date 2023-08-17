@@ -1,120 +1,113 @@
-import React from 'react';
-import './Footer.css';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./Footer.css";
 
-function Footer() {
+import logo from "../assets/photo.jpg";
+import playstore from "../assets/en_badge_web_generic.png";
+import appstore from "../assets/appstorebadge.png";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
-        </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
-        </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
-        </div>
-      </section>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-row-logo">
+          <div className="footer-logo">
+            {/* Your logo */}
+            <img src={logo} alt="Logo" />
           </div>
-          <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+          <div className="footer-social-icons">
+            {/* Social media icons */}
+            <a href="https://facebook.com" className="social-icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" className="social-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com" className="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" className="social-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
+        <hr className="footer-line" />
+        <div className="footer-row-logo">
+          <div className="footer-section">
+            <h4>About Us</h4>
+            <p>
+              At ABO, we take pride in offering a diverse range of content for
+              our viewers. Our platform features a curated selection of both
+              local and international movies, TV shows, and original
+              productions. Whether you're in the mood for the latest Hollywood
+              blockbuster or want to explore compelling stories from your own
+              region, ABO+ has something for everyone. Join us to enjoy a rich
+              blend of entertainment that caters to your unique preferences.
+            </p>
           </div>
-          <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+          <div className="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <a href="#">Account</a>
+              </li>
+              <li>
+                <a href="#">Ways to watch</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Only on ADO+</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Other Links</h4>
+            <ul>
+              <li>
+                <a href="#">Media Center</a>
+              </li>
+              <li>
+                <a href="#">Corporate Information</a>
+              </li>
+              <li>
+                <a href="#">Privacy</a>
+              </li>
+              <li>
+                <a href="#">Cookie Preferences</a>
+              </li>
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Mobile Apps</h4>
+            <p>Download the ADO+ app from the app stores:</p>
+            <div className="mobile-app-icons">
+              <a href="#">
+                <img src={appstore} alt="App Store" />
+              </a>
+              <a href="#">
+                <img src={playstore} alt="Play Store" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              TRVL
-              <i class='fab fa-typo3' />
-            </Link>
-          </div>
-          <small class='website-rights'>TRVL © 2020</small>
-          <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i class='fab fa-youtube' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      <hr className="footer-line" />
+      <div className="footer-row">
+        <p className="footer-copyright">
+          © {currentYear} Avaeyl BoxOffice. All rights reserved.
+        </p>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;

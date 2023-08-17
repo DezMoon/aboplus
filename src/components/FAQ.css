@@ -1,0 +1,110 @@
+.faq-section {
+  background-color: black;
+  color: white;
+  padding: 4rem 0;
+  border-bottom: 8px solid #232323;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.faq-container {
+  max-width: 124rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.faq-tile {
+  padding: 1rem 1rem;
+  background-color: #2d2d2d;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.question {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expand-icon {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+.faq-tile.active .expand-icon {
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  border-top: 0.5px solid gray;
+  padding-top: 10px;
+  text-align: left;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+.active .answer {
+  display: block;
+  max-height: 1000px;
+  padding-top: 20px;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.cta-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cta-container p {
+  font-size: 18px;
+}
+
+.cta-container form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-container input[type="email"] {
+  padding: 10px;
+  width: 300px;
+}
+
+.cta-container button {
+  padding: 17px 40px;
+  border-radius: 8px;
+  border: 0;
+  margin-left: 5px;
+  background-color: rgb(223, 43, 64); /* Set background to transparent */
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  color: hsl(0, 0%, 100%);
+}
+
+.cta-container button:hover {
+  letter-spacing: 3px;
+  background-color: rgb(223, 43, 64); /* Change background color on hover */
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(223, 43, 64) 0px 7px 29px 0px;
+}
+
+.cta-container button:active {
+  letter-spacing: 3px;
+  background-color: rgb(223, 43, 64); /* Change background color on active */
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(223, 43, 64) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}

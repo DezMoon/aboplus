@@ -1,14 +1,20 @@
-import React from 'react';
-import '../../App.css';
-import Cards from '../Cards';
-import HeroSection from '../HeroSection';
-import Footer from '../Footer';
+import React from "react";
+import "../../App.css";
+import AnyDevice from "../AnyDevice";
+import HeroSection from "../HeroSection";
+import WatchOffline from "../WatchOffline";
+import CreateKidsProfile from "../CreateKidsProfile";
+import FAQ from "../FAQ";
+import Footer from "../Footer";
 
 function Home() {
   return (
     <>
       <HeroSection />
-      <Cards />
+      <AnyDevice />
+      <WatchOffline />
+      <CreateKidsProfile />
+      <FAQ />
       <Footer />
     </>
   );
