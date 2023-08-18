@@ -5,7 +5,7 @@ import GenreData from "./GenreData";
 const Genre = () => {
   return (
     <div className="genre-section">
-      <h2 className="genre-heading">Genres Offered by ADO+</h2>
+      <h2 className="genre-heading">Genres Offered by ABO+</h2>
       <div className="genre-container">
         {GenreData.map((genre, index) => (
           <div className="genre-tile" key={index}>
