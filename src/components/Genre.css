@@ -1,0 +1,61 @@
+.genre-section {
+  background-color: #000;
+  border-bottom: 8px solid #232323;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.genre-heading {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.genre-tile {
+  display: flex;
+  margin-bottom: 30px;
+  box-shadow: 0px 8px 24px rgba(18, 28, 53, 0.1);
+  border-radius: 8px;
+  background-color: #111;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.genre-content {
+  flex: 70%;
+  padding: 20px;
+  text-align: left;
+}
+
+.genre-title {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.genre-description {
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.genre-image {
+  flex: 30%;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .genre-tile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .genre-content,
+  .genre-image {
+    flex: 100;
+  }
+}

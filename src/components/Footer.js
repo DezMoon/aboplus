@@ -37,13 +37,16 @@ const Footer = () => {
           <div className="footer-section">
             <h4>About Us</h4>
             <p>
-              At ABO, we take pride in offering a diverse range of content for
-              our viewers. Our platform features a curated selection of both
-              local and international movies, TV shows, and original
-              productions. Whether you're in the mood for the latest Hollywood
-              blockbuster or want to explore compelling stories from your own
-              region, ABO+ has something for everyone. Join us to enjoy a rich
-              blend of entertainment that caters to your unique preferences.
+              Welcome to ABO+, your gateway to premium Zambian entertainment.
+              We're more than just a streaming service – we're a celebration of
+              Zambia's finest Movies and TV Shows. With exclusive genres like
+              "Now Showing" and our original Animation, Astronomy, Biography,
+              Documentary, and Science Series, we're dedicated to showcasing the
+              best of Zambia's creative brilliance. Plus, for those seeking
+              more, our "Buy" option lets you access premium content before it
+              hits Now Showing. Join us for a unique streaming experience that
+              brings the heart of Zambia's entertainment industry to your
+              screen.
             </p>
           </div>
           <div className="footer-section">
@@ -88,7 +91,7 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h4>Mobile Apps</h4>
-            <p>Download the ADO+ app from the app stores:</p>
+            <p>Download the ABO+ app from the app stores:</p>
             <div className="mobile-app-icons">
               <a href="#">
                 <img src={appstore} alt="App Store" />

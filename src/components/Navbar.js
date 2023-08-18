@@ -42,7 +42,7 @@ function Navbar() {
       <nav className={`navbar ${navbarSolid ? "solid" : ""}`}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img width="150px" height="auto" src={Logo} alt="logo" />
+            <img width="70px" height="auto" src={Logo} alt="logo" />
           </Link>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
