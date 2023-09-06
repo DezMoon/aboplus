@@ -1,6 +1,6 @@
-# ADO+ Streaming Platform
+# ABO+ Streaming Platform
 
-ADO+ is a subscription-based streaming platform that offers a wide range of movies, TV shows, and other video content. With ADO+, you can watch your favorite content on any device, anywhere, and anytime.
+ABO+ is a subscription-based streaming platform that offers a wide range of movies, TV shows, and other video content. With ABO+, you can watch your favorite content on any device, anywhere, and anytime.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ ADO+ is a subscription-based streaming platform that offers a wide range of movi
 
 ## Description
 
-ADO+ is a modern and user-friendly streaming platform that provides access to an extensive library of entertainment content. The platform offers a seamless streaming experience, allowing users to enjoy their favorite movies and TV shows on a variety of devices.
+ABO+ is a modern and user-friendly streaming platform that provides access to an extensive library of entertainment content. The platform offers a seamless streaming experience, allowing users to enjoy their favorite movies and TV shows on a variety of devices.
 
 ## Features
 
