@@ -10,7 +10,6 @@ ABO+ is a subscription-based streaming platform that offers a wide range of movi
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
@@ -44,7 +43,3 @@ ABO+ is a modern and user-friendly streaming platform that provides access to an
 ## Contributing
 
 Contributions are welcome! If you find a bug or have a suggestion, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
